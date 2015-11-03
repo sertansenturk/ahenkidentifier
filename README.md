@@ -1,6 +1,4 @@
 # ahenk_identifier
-Introduction
-------------
 Identifies the Ahenk (Transposition) of a makam music recording given the tonic frequency and the symbol (or the makam)
 
 Usage

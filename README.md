@@ -45,6 +45,10 @@ Now you can install the rest of the dependencies:
 
     pip install -r requirements
 
+Issues
+-------
+The "Bolahenk Nısfiye" ahenk, which is an octave higher than the default ahenk ("Bolahenk"), is omitted. Automatic identification of this ahenk requires the instrument being performed in solo performances. It is also ambiguous to distinguish it from "Bolahenk" in multi-instrument recordings.
+
 Authors
 -------
 Sertan Senturk

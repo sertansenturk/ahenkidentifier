@@ -17,14 +17,14 @@ ahenk = ahenkidentifier.identify(tonicfreq, noteSymbol)
 The inputs are:
 ```python
 # tonicfreq 	  :	The frequency of the tonic in Hz.
-# makam/noteSymbol:	The algorithm can either accept the __makam-slug__ or 
-#					the __note symbol__ of the tonic as a string.
+# makam/noteSymbol:	The algorithm can either accept the makam-slug or 
+#					the note symbol of the tonic as a string.
 ```
 For the makam-slug names, check the json file in the data folder. The slugs are the same with the ones in the filenames of the scores in the [SymbTr](https://github.com/MTG/SymbTr) collection. The tonic symbols are notated as \[Note pitch-class\]\[Octave\](Accidental Symbol(Holderian Comma)), e.g. B4b1
 
 The output is:
 ```python
-# ahenk 		  :	The name of the ahenk in unicode
+# ahenk 		  :	The name of the ahenk as a unicode string
 ```
 
 Installation

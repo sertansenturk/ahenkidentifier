@@ -35,7 +35,7 @@ If you want to install ahenkidentifier, it is recommended to install the package
     python setup.py install
 
 If you want to be able to edit files and have the changes be reflected, then
-install compmusic like this instead
+install the repository like this instead:
 
     pip install -e .
 
@@ -45,7 +45,7 @@ Now you can install the rest of the dependencies:
 
 Issues
 -------
-The "Bolahenk Nısfiye" ahenk, which is an octave higher than the default ahenk ("Bolahenk"), is omitted. Automatic identification of this ahenk requires the instrument being performed in solo performances. It is also ambiguous to distinguish it from "Bolahenk" in multi-instrument recordings.
+The "Bolahenk Nısfiye" ahenk, which is an octave higher than the default ahenk ("Bolahenk"). Automatic identification of this ahenk requires the instrument being performed in solo performances. It is also ambiguous to distinguish it from "Bolahenk" in multi-instrument recordings. Therefore this ahenk is omitted.
 
 Authors
 -------

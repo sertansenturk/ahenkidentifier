@@ -16,7 +16,7 @@ The inputs are:
 ```python
 # tonicfreq 	  :	The frequency of the tonic in Hz.
 # makam/noteSymbol:	The algorithm can either accept the makam-slug or 
-#					the note symbol of the tonic as a string.
+#					the note symbol of the tonic in SymbTr format as a string (e.g. B4b1).
 ```
 For the makam-slug names, check the json file in the data folder. The slugs are the same with the ones in the filenames of the scores in the [SymbTr](https://github.com/MTG/SymbTr) collection. The tonic symbols are notated as \[Note pitch-class\]\[Octave\](Accidental Symbol(Holderian Comma)), e.g. B4b1
 

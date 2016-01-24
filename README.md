@@ -49,7 +49,7 @@ The "Bolahenk Nısfiye" ahenk, which is an octave higher than the default ahenk 
 
 Authors
 -------
-Sertan Senturk
+Sertan Şentürk
 contact@sertansenturk.com
 
 Reference

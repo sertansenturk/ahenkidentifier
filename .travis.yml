@@ -5,7 +5,7 @@ python:
 
 # command to install dependencies
 install:
-  - pip install -r extras/unittests/requirements
+  - pip install -r unittests/requirements
   - pip install flake8
 
 # command to run before the tests

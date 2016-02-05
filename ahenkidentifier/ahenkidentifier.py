@@ -25,12 +25,16 @@ def identify(tonic_freq, symbol_in):
     # get the transposition in cents, rounded to the closest semitone
     cent_dist = hz_to_cent(tonic_freq, tonic_bolahenk_freq)
     mod_cent_dist = np.mod(cent_dist, CENTS_IN_OCTAVE)
+
+    # if the distance is more than 1150 cents wrap it to minus so it will be mapped to 0 cents
+    mod_cent_dist = mod_cent_dist if mod_cent_dist < 1150 else mod_cent_dist-1200
+
     mod_cent_approx = int(round(mod_cent_dist * 0.01) * 100)
     mod_cent_dev = abs(mod_cent_approx-mod_cent_dist)
 
-    dist_dict = {'distance_to_bolahenk':{'performed':{'value':mod_cent_dist, 'unit':'cent'},
+    dist_dict = {'distance_to_bolahenk':{'performed':{'value':mod_cent_dist.tolist()[0], 'unit':'cent'},
                                          'theoretical':{'value':mod_cent_approx, 'unit':'cent'}},
-                 'deviation':{'value':mod_cent_dev, 'unit':'cent'}}
+                 'deviation':{'value':mod_cent_dev.tolist()[0], 'unit':'cent'}}
 
     # get the ahenk
     for ahenk_slug, val in ahenks.iteritems():

@@ -22,7 +22,7 @@ For the makam-slug names, check the json file in the data folder. The slugs are 
 
 The output is:
 ```python
-# ahenk 		  :	The name of the ahenk as a unicode string
+# ahenk 		  :	The name of the ahenk as a unicode string and a dictionary of computed stats
 ```
 
 Installation

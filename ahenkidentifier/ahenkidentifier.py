@@ -30,10 +30,10 @@ def identify(tonic_freq, symbol_in):
     # if the distance is more than 1150 cents wrap it to minus
     # so it will be mapped to 0 cents
     mod_cent_dist = (mod_cent_dist if mod_cent_dist < 1150
-                     else mod_cent_dist-1200)
+                     else mod_cent_dist - 1200)
 
     mod_cent_approx = int(round(mod_cent_dist * 0.01) * 100)
-    mod_cent_dev = abs(mod_cent_approx-mod_cent_dist)
+    mod_cent_dev = abs(mod_cent_approx - mod_cent_dist)
 
     # create the stats dictionary
     distance_to_bolahenk = {'performed': {'value': mod_cent_dist.tolist()[0],

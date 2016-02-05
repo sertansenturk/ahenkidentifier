@@ -2,7 +2,7 @@
 Identifies the ahenk (transposition) of a makam music recording given the tonic frequency and the symbol (or the makam)
 
 Usage
--------=
+-------
 
 ```python
 from ahenkidentifier import ahenkidentifier

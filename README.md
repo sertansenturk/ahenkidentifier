@@ -2,7 +2,7 @@
 Identifies the ahenk (transposition) of a makam music recording given the tonic frequency and the symbol (or the makam)
 
 Usage
-=======
+-------=
 
 ```python
 from ahenkidentifier import ahenkidentifier
@@ -26,7 +26,7 @@ The output is:
 ```
 
 Installation
-============
+-------
 
 If you want to install ahenkidentifier, it is recommended to install the package and dependencies into a virtualenv. In the terminal, do the following:
 

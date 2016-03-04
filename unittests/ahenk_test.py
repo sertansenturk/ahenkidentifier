@@ -25,7 +25,7 @@ def test_ahenk():
     for freq in freqs:
         ahenk = ahenkidentifier.identify(freq, dummy_note_symbol)
         if not ahenk[0] == correct_ahenks[str(freq)][0]:
-            print "Mismatch in " + dummy_note_symbol + ' = ' + str(freq)
+            print("Mismatch in " + dummy_note_symbol + ' = ' + str(freq))
             success = False
 
     assert success

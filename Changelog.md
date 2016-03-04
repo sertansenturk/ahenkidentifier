@@ -1,3 +1,6 @@
+#### ahenkidentifier v1.1.1
+ - Fixed input tonic_symbol/makam_slug checking
+
 #### ahenkidentifier v1.1
  - Python 3.5 compatibility
 

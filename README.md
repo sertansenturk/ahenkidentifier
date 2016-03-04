@@ -2,7 +2,7 @@
 Identifies the ahenk (transposition) of a makam music recording given the tonic frequency and the symbol (or the makam)
 
 Usage
-=======
+-------
 
 ```python
 from ahenkidentifier import ahenkidentifier
@@ -22,11 +22,11 @@ For the makam-slug names, check the json file in the data folder. The slugs are 
 
 The output is:
 ```python
-# ahenk 		  :	The name of the ahenk as a unicode string
+# ahenk 		  :	The name of the ahenk as a unicode string and a dictionary of computed stats
 ```
 
 Installation
-============
+-------
 
 If you want to install ahenkidentifier, it is recommended to install the package and dependencies into a virtualenv. In the terminal, do the following:
 
@@ -45,7 +45,7 @@ Now you can install the rest of the dependencies:
 
 Issues
 -------
-The "Bolahenk Nısfiye" ahenk, which is an octave higher than the default ahenk ("Bolahenk"). Automatic identification of this ahenk requires the instrument being performed in solo performances. It is also ambiguous to distinguish it from "Bolahenk" in multi-instrument recordings. Therefore this ahenk is omitted.
+The "Bolahenk Nısfiye" ahenk, which is an octave higher than the default ahenk ("Bolahenk"), is omitted. In solo performances, automatic identification of this ahenk requires the frequency range of the instrument being performed. Moreoever, it is ambiguous to distinguish it from "Bolahenk" in multi-instrument recordings.
 
 Authors
 -------

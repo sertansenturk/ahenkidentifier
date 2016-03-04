@@ -11,6 +11,7 @@ def identify(tonic_freq, symbol_in):
     ahenks = get_ahenk_dict()
 
     # get the tonic symbol and frequency
+    tonic_bolahenk_freq = None
     if symbol_in in tonic_dict.keys():  # tonic symbol given
         # tonic_symbol = symbol_in
         tonic_bolahenk_freq = tonic_dict[symbol_in]['bolahenk_freq']

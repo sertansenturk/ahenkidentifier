@@ -7,6 +7,7 @@ python:
 # command to install dependencies
 install:
   - pip install -r requirements
+  - pip install codecov
   - pip install flake8
 
 # command to run before the tests
@@ -16,3 +17,7 @@ before_script:
 # command to run tests
 script: 
   - nosetests unittests/ahenk_test.py
+
+# after success
+after_success:
+  - codecov

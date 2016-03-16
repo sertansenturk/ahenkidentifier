@@ -4,7 +4,7 @@ import numpy as np
 from future.utils import iteritems
 
 
-class AhenkIdentifier(object):
+class AhenkIdentifier2(object):
     CENTS_IN_OCTAVE = 1200  # cents
 
     def __init__(self):

@@ -44,7 +44,7 @@ Now you can install the rest of the dependencies:
 
 Issues
 -------
-The "Bolahenk Nısfiye" ahenk, which is an octave higher than the default ahenk ("Bolahenk"), is omitted. In solo performances, automatic identification of this ahenk requires the frequency range of the instrument being performed. Moreoever, it is ambiguous to distinguish it from "Bolahenk" in multi-instrument recordings.
+The "Bolahenk Nısfiye" ahenk, which is an octave higher than the default ahenk ("Bolahenk"), is omitted. In solo performances, automatic identification of this ahenk requires the frequency range of the instrument being performed. Moreover, it is ambiguous to distinguish it from "Bolahenk" in multi-instrument recordings.
 
 Authors
 -------

@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(name='ahenk-identifier',
-    version='0.1',
+    version='1.2',
     author='Sertan Senturk',
     author_email='contact AT sertansenturk DOT com',
     license='agpl 3.0',

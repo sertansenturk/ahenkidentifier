@@ -1,3 +1,6 @@
+#### ahenkidentifier v1.2.1
+ - Added missing MANIFEST file and the data packages when installing from github
+
 #### ahenkidentifier v1.2
  - Refactored the methods into the AhenkIdentifier object
 

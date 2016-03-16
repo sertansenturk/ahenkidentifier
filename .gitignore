@@ -2,3 +2,6 @@
 .ipynb_checkpoints
 .idea
 *.save
+.*
+!.travis.yml
+!.gitignore

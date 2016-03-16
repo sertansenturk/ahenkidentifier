@@ -1,8 +1,6 @@
-import numpy as np
 from ahenkidentifier.AhenkIdentifier import AhenkIdentifier
+import numpy as np
 import json
-
-NUM_CENTS_IN_OCTAVE = 1200
 
 
 def test_ahenk():
@@ -18,7 +16,7 @@ def test_ahenk():
     dummy_note_symbol = 'A4'
 
     # get the frequencies to get ahenk
-    cc = np.arange(0, num_octaves, cent_step / NUM_CENTS_IN_OCTAVE)
+    cc = np.arange(0, num_octaves, cent_step / AhenkIdentifier.CENTS_IN_OCTAVE)
     freqs = [int(i) for i in start_freq * np.power(2.0, cc)]
 
     # compute

@@ -6,14 +6,9 @@ python:
   - "3.4"
   - "3.5"
 
-# command before installation
-before_install:
-  - pip install codecov
-
 # command to install dependencies
 install:
   - pip install flake8
-  - pip install coveralls
   - pip install -r requirements
 
 # command to run before the tests
@@ -23,9 +18,3 @@ before_script:
 # command to run tests
 script: 
   - nosetests unittests/ahenk_test.py
-  - nosetests --with-coverage
-
-# after success
-after_success:
-  - codecov
-  - coveralls

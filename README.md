@@ -5,11 +5,11 @@ Usage
 -------
 
 ```python
-from ahenkidentifier import ahenkidentifier
+from ahenkidentifier.AhenkIdentifier import AhenkIdentifier
 
-ahenk = ahenkidentifier.identify(tonicfreq, makam)
+ahenk = AhenkIdentifier.identify(tonicfreq, makam)
 # or 
-ahenk = ahenkidentifier.identify(tonicfreq, noteSymbol)
+ahenk = AhenkIdentifier.identify(tonicfreq, noteSymbol)
 ```
 
 The inputs are:
@@ -34,8 +34,7 @@ If you want to install ahenkidentifier, it is recommended to install the package
     source env/bin/activate
     python setup.py install
 
-If you want to be able to edit files and have the changes be reflected, then
-install the repository like this instead:
+If you want to be able to edit files and have the changes be reflected, then install the repository like this instead:
 
     pip install -e .
 

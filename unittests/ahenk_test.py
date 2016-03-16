@@ -1,5 +1,5 @@
 import numpy as np
-from ahenkidentifier import AhenkIdentifier
+from ahenkidentifier.AhenkIdentifier import AhenkIdentifier
 import json
 
 NUM_CENTS_IN_OCTAVE = 1200

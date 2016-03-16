@@ -1,5 +1,5 @@
 import numpy as np
-from ahenkidentifier import ahenkidentifier
+from ahenkidentifier import AhenkIdentifier
 import json
 
 NUM_CENTS_IN_OCTAVE = 1200
@@ -23,7 +23,7 @@ def test_ahenk():
 
     # compute
     for freq in freqs:
-        ahenk = ahenkidentifier.identify(freq, dummy_note_symbol)
+        ahenk = AhenkIdentifier.identify(freq, dummy_note_symbol)
         if not ahenk[0] == correct_ahenks[str(freq)][0]:
             print("Mismatch in " + dummy_note_symbol + ' = ' + str(freq))
             success = False

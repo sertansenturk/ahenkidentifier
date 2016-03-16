@@ -40,20 +40,25 @@ class AhenkIdentifier(object):
                          else mod_cent_dist - 1200)
 
         mod_cent_approx = int(np.round(mod_cent_dist * 0.01) * 100)
-        mod_cent_dev = abs(mod_cent_approx - mod_cent_dist)
+        mod_cent_dev = mod_cent_approx - mod_cent_dist
+        abs_mod_cent_dev = abs(mod_cent_dev)
 
         # create the stats dictionary
         distance_to_bolahenk = {
             'performed': {'value': mod_cent_dist.tolist()[0], 'unit': 'cent'},
             'theoretical': {'value': mod_cent_approx, 'unit': 'cent'}}
-        dist_dict = {'distance_to_bolahenk': distance_to_bolahenk,
-                     'deviation': {'value': mod_cent_dev.tolist()[0],
-                                   'unit': 'cent'}}
+        ahenk_dict = {'name': '',
+                      'distance_to_bolahenk': distance_to_bolahenk,
+                      'deviation': {'value': mod_cent_dev.tolist()[0],
+                                    'unit': 'cent'},
+                      'abs_deviation': {'value': abs_mod_cent_dev.tolist()[0],
+                                        'unit': 'cent'}}
 
         # get the ahenk
         for ahenk_slug, val in iteritems(ahenks):
             if val['cent_transposition'] == mod_cent_approx:
-                return val['name'], dist_dict
+                ahenk_dict['name'] = val['name']
+                return ahenk_dict
 
     @staticmethod
     def _get_tonic_dict():

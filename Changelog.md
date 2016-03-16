@@ -1,4 +1,5 @@
-#### ahenkidentifier v1.2.1
+#### ahenkidentifier v1.3
+ - Merged the two outputs into a single dictionary
  - Added missing MANIFEST file and the data packages when installing from github
 
 #### ahenkidentifier v1.2

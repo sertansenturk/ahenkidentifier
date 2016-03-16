@@ -2,7 +2,7 @@
 
 from setuptools import setup
 
-setup(name='ahenk-identifier',
+setup(name='ahenkidentifier',
     version='1.2',
     author='Sertan Senturk',
     author_email='contact AT sertansenturk DOT com',

@@ -25,10 +25,12 @@ class AhenkIdentifier(object):
                 if symbol_in in val['makams']:
                     # tonic_symbol = sym
                     tonic_bolahenk_freq = val['bolahenk_freq']
+                    if not tonic_bolahenk_freq:  # tonic symbol is not known
+                        raise KeyError("The tonic of this makam is not known.")
                     break
             if not tonic_bolahenk_freq:
-                raise ValueError("The second input has to be the tonic " +
-                                 "symbol or the makam slug!")
+                raise ValueError("The second input has to be a tonic " +
+                                 "symbol or a makam slug!")
 
         # get the transposition in cents, rounded to the closest semitone
         cent_dist = cls._hz_to_cent(tonic_freq, tonic_bolahenk_freq)

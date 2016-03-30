@@ -13,7 +13,8 @@ install:
 
 # command to run before the tests
 before_script: 
-  - "flake8 ahenkidentifier"
+  - "flake8 ahenkidentifier --ignore=E501"
+  - "flake8 unittests --ignore=E501"
 
 # command to run tests
 script: 

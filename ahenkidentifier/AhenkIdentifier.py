@@ -12,8 +12,8 @@ class AhenkIdentifier(object):
 
     @classmethod
     def identify(cls, tonic_freq, symbol_in):
-        tonic_dict = cls._get_tonic_dict()
-        ahenks = cls._get_ahenk_dict()
+        tonic_dict = cls._get_dict('tonic')
+        ahenks = cls._get_dict('ahenk')
 
         # get the tonic symbol and frequency
         tonic_bolahenk_freq = None
@@ -63,16 +63,10 @@ class AhenkIdentifier(object):
                 return ahenk_dict
 
     @staticmethod
-    def _get_tonic_dict():
-        tonic_dict_file = os.path.join(os.path.dirname(
-            os.path.abspath(__file__)), 'data', 'tonic.json')
-        return json.load(open(tonic_dict_file, 'r'))
-
-    @staticmethod
-    def _get_ahenk_dict():
-        ahenk_dict_file = os.path.join(os.path.dirname(
-            os.path.abspath(__file__)), 'data', 'ahenk.json')
-        return json.load(open(ahenk_dict_file, 'r'))
+    def _get_dict(dict_type):
+        dict_file = os.path.join(os.path.dirname(
+            os.path.abspath(__file__)), 'data', dict_type + '.json')
+        return json.load(open(dict_file, 'r'))
 
     @staticmethod
     def _hz_to_cent(hz_track, ref_freq):

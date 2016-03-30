@@ -5,3 +5,6 @@
 .*
 !.travis.yml
 !.gitignore
+*.egg-info/
+build/
+dist/

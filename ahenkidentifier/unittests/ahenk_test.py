@@ -23,7 +23,7 @@ def test_ahenk_with_makam_with_unknown_tonic_input():
     try:
         t_wrapper(dummy_makam)
     except KeyError as e:
-        correct_err_msg = e.message == wrong_str_err
+        correct_err_msg = str(e) == wrong_str_err
 
     assert correct_err_msg
 
@@ -36,7 +36,7 @@ def test_ahenk_with_random_str():
     try:
         t_wrapper(dummy_tonic_symbol)
     except ValueError as e:
-        correct_err_msg = e.message == wrong_str_err
+        correct_err_msg = str(e) == wrong_str_err
 
     assert correct_err_msg
 

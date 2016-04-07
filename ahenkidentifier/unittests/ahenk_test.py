@@ -8,22 +8,18 @@ _curr_folder = os.path.dirname(os.path.abspath(__file__))
 
 def test_ahenk_with_tonic_symbol_input():
     dummy_tonic_symbol = 'A4'
-    t_wrapper(dummy_tonic_symbol)
+    assert t_wrapper(dummy_tonic_symbol)
 
 
 def test_ahenk_with_makam_input():
     dummy_makam = 'huseyni'
-    t_wrapper(dummy_makam)
+    assert t_wrapper(dummy_makam)
 
 
 def test_ahenk_with_makam_with_unknown_tonic_input():
     dummy_makam = 'dusems'
     wrong_str_err = "The tonic of this makam is not known."
-    correct_err_msg = False
-    try:
-        t_wrapper(dummy_makam)
-    except KeyError as e:
-        correct_err_msg = str(e) == wrong_str_err
+    correct_err_msg = t_error_wrapper(dummy_makam, KeyError, wrong_str_err)
 
     assert correct_err_msg
 
@@ -32,13 +28,22 @@ def test_ahenk_with_random_str():
     dummy_tonic_symbol = 'eheh'
     wrong_str_err = "The second input has to be a tonic symbol or a " \
                     "makam slug!"
-    correct_err_msg = False
-    try:
-        t_wrapper(dummy_tonic_symbol)
-    except ValueError as e:
-        correct_err_msg = str(e) == wrong_str_err
+    correct_err_msg = t_error_wrapper(dummy_tonic_symbol, IOError,
+                                      wrong_str_err)
 
     assert correct_err_msg
+
+
+def t_error_wrapper(wrong_str, err_type, wrong_str_err):
+    correct_err_msg = False
+    try:
+        t_wrapper(wrong_str)
+    except err_type as e:
+        # str(e) returns the error message with trailing '', that's why we
+        # check the validitiy with "in"
+        correct_err_msg = wrong_str_err in str(e)
+
+    return correct_err_msg
 
 
 def t_wrapper(dummy_str):
@@ -63,4 +68,4 @@ def t_wrapper(dummy_str):
             print("Mismatch in " + dummy_str + ' = ' + str(freq))
             success = False
 
-    assert success
+    return success

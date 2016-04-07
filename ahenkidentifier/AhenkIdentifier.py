@@ -57,7 +57,7 @@ class AhenkIdentifier(object):
                 AhenkIdentifier._get_tonic_default_freq_from_makam(
                     symbol_in, tonic_bolahenk_freq, tonic_dict)
             if not tonic_bolahenk_freq:
-                raise ValueError("The second input has to be a tonic " +
+                raise IOError("The second input has to be a tonic " +
                                  "symbol or a makam slug!")
 
         return tonic_bolahenk_freq

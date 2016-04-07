@@ -13,8 +13,8 @@ class AhenkIdentifier(object):
         ahenks = cls._get_dict('ahenk')
 
         # get the tonic symbol and frequency
-        tonic_bolahenk_freq = cls._get_tonic_default_freq(symbol_in,
-                                                          tonic_dict)
+        tonic_symbol, tonic_bolahenk_freq, makam = cls._get_tonic_symbol(
+            symbol_in, tonic_dict)
 
         # get the transposition in cents, rounded to the closest semitone
         cent_dist = cls._hz_to_cent(tonic_freq, tonic_bolahenk_freq)
@@ -33,7 +33,8 @@ class AhenkIdentifier(object):
         distance_to_bolahenk = {
             'performed': {'value': mod_cent_dist.tolist()[0], 'unit': 'cent'},
             'theoretical': {'value': mod_cent_approx, 'unit': 'cent'}}
-        ahenk_dict = {'name': '',
+        ahenk_dict = {'name': '', 'makam': makam,
+                      'tonic_symbol': tonic_symbol,
                       'distance_to_bolahenk': distance_to_bolahenk,
                       'deviation': {'value': mod_cent_dev.tolist()[0],
                                     'unit': 'cent'},
@@ -47,32 +48,33 @@ class AhenkIdentifier(object):
                 return ahenk_dict
 
     @staticmethod
-    def _get_tonic_default_freq(symbol_in, tonic_dict):
-        tonic_bolahenk_freq = None
+    def _get_tonic_symbol(symbol_in, tonic_dict):
         if symbol_in in tonic_dict.keys():  # tonic symbol given
-            # tonic_symbol = symbol_in
+            tonic_symbol = symbol_in
+            makam = None
             tonic_bolahenk_freq = tonic_dict[symbol_in]['bolahenk_freq']
         else:  # check if the makam name is given
-            tonic_bolahenk_freq = \
-                AhenkIdentifier._get_tonic_default_freq_from_makam(
-                    symbol_in, tonic_bolahenk_freq, tonic_dict)
+            makam = symbol_in
+            tonic_symbol, tonic_bolahenk_freq = \
+                AhenkIdentifier._get_tonic_symbol_from_makam(symbol_in,
+                                                             tonic_dict)
             if not tonic_bolahenk_freq:
                 raise IOError("The second input has to be a tonic " +
                               "symbol or a makam slug!")
 
-        return tonic_bolahenk_freq
+        return tonic_symbol, tonic_bolahenk_freq, makam
 
     @staticmethod
-    def _get_tonic_default_freq_from_makam(symbol_in, tonic_bolahenk_freq,
-                                           tonic_dict):
+    def _get_tonic_symbol_from_makam(symbol_in, tonic_dict):
+        tonic_bolahenk_freq = tonic_symbol = None
         for sym, val in iteritems(tonic_dict):
             if symbol_in in val['makams']:
-                # tonic_symbol = sym
+                tonic_symbol = sym
                 tonic_bolahenk_freq = val['bolahenk_freq']
                 if not tonic_bolahenk_freq:  # tonic symbol is not known
                     raise KeyError("The tonic of this makam is not known.")
                 break
-        return tonic_bolahenk_freq
+        return tonic_symbol, tonic_bolahenk_freq
 
     @staticmethod
     def _get_dict(dict_type):

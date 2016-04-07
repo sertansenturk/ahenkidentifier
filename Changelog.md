@@ -1,3 +1,8 @@
+#### ahenkidentifier v1.4
+ - Added more unittests
+ - Added code coverage
+ - Added code climate
+
 #### ahenkidentifier v1.3
  - Merged the two outputs into a single dictionary
  - Added missing MANIFEST file and the data packages when installing from github

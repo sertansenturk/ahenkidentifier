@@ -31,10 +31,11 @@ def ahenk_test_wrapper(dummy_str):
     freqs = [int(i) for i in start_freq * np.power(2.0, cc)]
 
     # compute
+    success = True
     for freq in freqs:
         ahenk = AhenkIdentifier.identify(freq, dummy_str)
         if not ahenk['name'] == correct_ahenks[str(freq)][0]:
             print("Mismatch in " + dummy_str + ' = ' + str(freq))
-            assert False
+            success = False
 
-    assert True
+    assert success

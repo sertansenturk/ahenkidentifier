@@ -13,21 +13,7 @@ class AhenkIdentifier(object):
         ahenks = cls._get_dict('ahenk')
 
         # get the tonic symbol and frequency
-        tonic_bolahenk_freq = None
-        if symbol_in in tonic_dict.keys():  # tonic symbol given
-            # tonic_symbol = symbol_in
-            tonic_bolahenk_freq = tonic_dict[symbol_in]['bolahenk_freq']
-        else:  # check if the makam name is given
-            for sym, val in iteritems(tonic_dict):
-                if symbol_in in val['makams']:
-                    # tonic_symbol = sym
-                    tonic_bolahenk_freq = val['bolahenk_freq']
-                    if not tonic_bolahenk_freq:  # tonic symbol is not known
-                        raise KeyError("The tonic of this makam is not known.")
-                    break
-            if not tonic_bolahenk_freq:
-                raise ValueError("The second input has to be a tonic " +
-                                 "symbol or a makam slug!")
+        tonic_bolahenk_freq = cls._get_tonic_default_freq(symbol_in, tonic_dict)
 
         # get the transposition in cents, rounded to the closest semitone
         cent_dist = cls._hz_to_cent(tonic_freq, tonic_bolahenk_freq)
@@ -58,6 +44,26 @@ class AhenkIdentifier(object):
             if val['cent_transposition'] == mod_cent_approx:
                 ahenk_dict['name'] = val['name']
                 return ahenk_dict
+
+    @staticmethod
+    def _get_tonic_default_freq(symbol_in, tonic_dict):
+        tonic_bolahenk_freq = None
+        if symbol_in in tonic_dict.keys():  # tonic symbol given
+            # tonic_symbol = symbol_in
+            tonic_bolahenk_freq = tonic_dict[symbol_in]['bolahenk_freq']
+        else:  # check if the makam name is given
+            for sym, val in iteritems(tonic_dict):
+                if symbol_in in val['makams']:
+                    # tonic_symbol = sym
+                    tonic_bolahenk_freq = val['bolahenk_freq']
+                    if not tonic_bolahenk_freq:  # tonic symbol is not known
+                        raise KeyError("The tonic of this makam is not known.")
+                    break
+            if not tonic_bolahenk_freq:
+                raise ValueError("The second input has to be a tonic " +
+                                 "symbol or a makam slug!")
+
+        return tonic_bolahenk_freq
 
     @staticmethod
     def _get_dict(dict_type):

@@ -16,6 +16,20 @@ def test_ahenk_with_makam_input():
     t_wrapper(dummy_makam)
 
 
+def test_ahenk_with_random_str():
+    correct_err_msg = False
+    dummy_tonic_symbol = 'eheh'
+    try:
+        t_wrapper(dummy_tonic_symbol)
+    except ValueError as e:
+        wrong_str_err = "The second input has to be a tonic symbol or a " \
+                        "makam slug!"
+
+        correct_err_msg = e.message == wrong_str_err
+
+    assert correct_err_msg
+
+
 def t_wrapper(dummy_str):
     # load the correct results
     ahenk_file = os.path.join(_curr_folder, 'correct_ahenks.json')

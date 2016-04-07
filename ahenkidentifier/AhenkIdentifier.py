@@ -58,7 +58,7 @@ class AhenkIdentifier(object):
                     symbol_in, tonic_bolahenk_freq, tonic_dict)
             if not tonic_bolahenk_freq:
                 raise IOError("The second input has to be a tonic " +
-                                 "symbol or a makam slug!")
+                              "symbol or a makam slug!")
 
         return tonic_bolahenk_freq
 

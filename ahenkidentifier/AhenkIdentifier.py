@@ -7,9 +7,6 @@ from future.utils import iteritems
 class AhenkIdentifier(object):
     CENTS_IN_OCTAVE = 1200  # cents
 
-    def __init__(self):
-        pass
-
     @classmethod
     def identify(cls, tonic_freq, symbol_in):
         tonic_dict = cls._get_dict('tonic')

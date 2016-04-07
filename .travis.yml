@@ -6,6 +6,9 @@ python:
   - "3.4"
   - "3.5"
 
+before_install:
+  - pip install codecov
+
 # command to install dependencies
 install:
   - pip install flake8
@@ -14,8 +17,10 @@ install:
 # command to run before the tests
 before_script: 
   - "flake8 ahenkidentifier --ignore=E501"
-  - "flake8 unittests --ignore=E501"
 
 # command to run tests
 script: 
-  - nosetests unittests/ahenk_test.py
+  - nosetests ahenkidentifier/unittests/ahenk_test.py --with-coverage
+
+after_success:
+  - codecov

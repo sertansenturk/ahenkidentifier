@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sertansenturk/ahenkidentifier.svg?branch=master)](https://travis-ci.org/sertansenturk/ahenkidentifier) [![codecov.io](https://codecov.io/github/sertansenturk/ahenkidentifier/coverage.svg?branch=master)](https://codecov.io/github/sertansenturk/ahenkidentifier?branch=master) [![Code Climate](https://codeclimate.com/github/sertansenturk/ahenkidentifier/badges/gpa.svg)](https://codeclimate.com/github/sertansenturk/ahenkidentifier)
+
 # ahenkidentifier
 Identifies the ahenk (transposition) of a makam music recording given the tonic frequency and the symbol (or the makam)
 

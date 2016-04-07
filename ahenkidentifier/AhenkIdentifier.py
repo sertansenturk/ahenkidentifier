@@ -33,7 +33,7 @@ class AhenkIdentifier(object):
         distance_to_bolahenk = {
             'performed': {'value': mod_cent_dist.tolist()[0], 'unit': 'cent'},
             'theoretical': {'value': mod_cent_approx, 'unit': 'cent'}}
-        ahenk_dict = {'name': '', 'makam': makam,
+        ahenk_dict = {'name': '', 'slug': '', 'makam': makam,
                       'tonic_symbol': tonic_symbol,
                       'distance_to_bolahenk': distance_to_bolahenk,
                       'deviation': {'value': mod_cent_dev.tolist()[0],
@@ -45,6 +45,7 @@ class AhenkIdentifier(object):
         for ahenk_slug, val in iteritems(ahenks):
             if val['cent_transposition'] == mod_cent_approx:
                 ahenk_dict['name'] = val['name']
+                ahenk_dict['slug'] = ahenk_slug
                 return ahenk_dict
 
     @staticmethod

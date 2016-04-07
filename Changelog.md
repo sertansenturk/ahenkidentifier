@@ -1,7 +1,7 @@
 #### ahenkidentifier v1.4
  - Added more unittests
- - Added code coverage
- - Added code climate
+ - Code coverage integration
+ - Code climate integration
 
 #### ahenkidentifier v1.3
  - Merged the two outputs into a single dictionary

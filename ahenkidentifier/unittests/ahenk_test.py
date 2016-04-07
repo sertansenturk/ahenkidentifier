@@ -8,15 +8,15 @@ _curr_folder = os.path.dirname(os.path.abspath(__file__))
 
 def test_ahenk_with_tonic_symbol_input():
     dummy_tonic_symbol = 'A4'
-    ahenk_test_wrapper(dummy_tonic_symbol)
+    t_wrapper(dummy_tonic_symbol)
 
 
 def test_ahenk_with_makam_input():
     dummy_makam = 'huseyni'
-    ahenk_test_wrapper(dummy_makam)
+    t_wrapper(dummy_makam)
 
 
-def ahenk_test_wrapper(dummy_str):
+def t_wrapper(dummy_str):
     # load the correct results
     ahenk_file = os.path.join(_curr_folder, 'correct_ahenks.json')
     correct_ahenks = json.load(open(ahenk_file, 'r'))

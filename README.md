@@ -27,6 +27,8 @@ The output is:
 # ahenk 		  :	The name of the ahenk as a unicode string and a dictionary of computed stats
 ```
 
+Please refer to [demo.ipynb](https://github.com/sertansenturk/ahenkidentifier/blob/master/demo.ipynb) for an interactive demo.
+
 Installation
 -------
 

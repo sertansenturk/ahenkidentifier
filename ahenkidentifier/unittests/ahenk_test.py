@@ -12,7 +12,7 @@ def test_ahenk_with_tonic_symbol_input():
 
 
 def test_ahenk_with_makam_input():
-    dummy_makam = 'segah'
+    dummy_makam = 'huseyni'
     ahenk_test_wrapper(dummy_makam)
 
 

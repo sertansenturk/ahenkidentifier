@@ -16,15 +16,26 @@ def test_ahenk_with_makam_input():
     t_wrapper(dummy_makam)
 
 
-def test_ahenk_with_random_str():
+def test_ahenk_with_makam_with_unknown_tonic_input():
+    dummy_makam = 'dusems'
+    wrong_str_err = "The tonic of this makam is not known."
     correct_err_msg = False
+    try:
+        t_wrapper(dummy_makam)
+    except KeyError as e:
+        correct_err_msg = e.message == wrong_str_err
+
+    assert correct_err_msg
+
+
+def test_ahenk_with_random_str():
     dummy_tonic_symbol = 'eheh'
+    wrong_str_err = "The second input has to be a tonic symbol or a " \
+                    "makam slug!"
+    correct_err_msg = False
     try:
         t_wrapper(dummy_tonic_symbol)
     except ValueError as e:
-        wrong_str_err = "The second input has to be a tonic symbol or a " \
-                        "makam slug!"
-
         correct_err_msg = e.message == wrong_str_err
 
     assert correct_err_msg

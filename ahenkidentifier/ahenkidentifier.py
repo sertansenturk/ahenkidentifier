@@ -57,8 +57,7 @@ class AhenkIdentifier(object):
         else:  # check if the makam name is given
             makam = symbol_in
             tonic_symbol, tonic_bolahenk_freq = \
-                cls._get_tonic_symbol_from_makam(symbol_in,
-                                                             tonic_dict)
+                cls._get_tonic_symbol_from_makam(symbol_in, tonic_dict)
             if not tonic_bolahenk_freq:
                 raise IOError("The second input has to be a tonic " +
                               "symbol or a makam slug!")

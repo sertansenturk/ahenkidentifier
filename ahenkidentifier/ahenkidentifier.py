@@ -48,8 +48,8 @@ class AhenkIdentifier(object):
                 ahenk_dict['slug'] = ahenk_slug
                 return ahenk_dict
 
-    @staticmethod
-    def _get_tonic_symbol(symbol_in, tonic_dict):
+    @classmethod
+    def _get_tonic_symbol(cls, symbol_in, tonic_dict):
         if symbol_in in tonic_dict.keys():  # tonic symbol given
             tonic_symbol = symbol_in
             makam = None
@@ -57,7 +57,7 @@ class AhenkIdentifier(object):
         else:  # check if the makam name is given
             makam = symbol_in
             tonic_symbol, tonic_bolahenk_freq = \
-                AhenkIdentifier._get_tonic_symbol_from_makam(symbol_in,
+                cls._get_tonic_symbol_from_makam(symbol_in,
                                                              tonic_dict)
             if not tonic_bolahenk_freq:
                 raise IOError("The second input has to be a tonic " +

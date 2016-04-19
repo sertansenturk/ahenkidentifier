@@ -7,7 +7,7 @@ Usage
 -------
 
 ```python
-from ahenkidentifier.AhenkIdentifier import AhenkIdentifier
+from ahenkidentifier.ahenkidentifier import AhenkIdentifier
 
 ahenk = AhenkIdentifier.identify(tonic_freq, makam)
 # or 

@@ -1,4 +1,4 @@
-from ahenkidentifier.AhenkIdentifier import AhenkIdentifier
+from ahenkidentifier.ahenkidentifier import AhenkIdentifier
 import numpy as np
 import json
 import os

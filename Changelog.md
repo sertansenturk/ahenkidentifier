@@ -1,13 +1,16 @@
-#### ahenkidentifier v1.4
+#### ahenkidentifier v1.5.0
+ - Changed the makam/tonic symbol error from IOError to ValueError
+
+#### ahenkidentifier v1.4.0
  - Added more unittests
  - Code coverage integration
  - Code climate integration
 
-#### ahenkidentifier v1.3
+#### ahenkidentifier v1.3.0
  - Merged the two outputs into a single dictionary
  - Added missing MANIFEST file and the data packages when installing from github
 
-#### ahenkidentifier v1.2
+#### ahenkidentifier v1.2.0
  - Refactored the methods into the AhenkIdentifier object
 
 #### ahenkidentifier v1.1.1

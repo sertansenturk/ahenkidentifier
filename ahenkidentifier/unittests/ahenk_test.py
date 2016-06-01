@@ -40,7 +40,7 @@ def t_error_wrapper(wrong_str, err_type, wrong_str_err):
         t_wrapper(wrong_str)
     except err_type as e:
         # str(e) returns the error message with trailing '', that's why we
-        # check the validitiy with "in"
+        # check the validity with "in"
         correct_err_msg = wrong_str_err in str(e)
 
     return correct_err_msg

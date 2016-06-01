@@ -28,7 +28,7 @@ def test_ahenk_with_random_str():
     dummy_tonic_symbol = 'eheh'
     wrong_str_err = "The second input has to be a tonic symbol or a " \
                     "makam slug!"
-    correct_err_msg = t_error_wrapper(dummy_tonic_symbol, IOError,
+    correct_err_msg = t_error_wrapper(dummy_tonic_symbol, ValueError,
                                       wrong_str_err)
 
     assert correct_err_msg

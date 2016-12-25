@@ -1,3 +1,6 @@
+#### ahenkidentifier v1.5.1
+ - Corrected Sultaniyegah tonic symbol from D5 to D4
+
 #### ahenkidentifier v1.5.0
  - Changed the makam/tonic symbol error from IOError to ValueError
 

@@ -359,6 +359,7 @@
     }, 
     "D4": {
         "makams": [
+            "sultaniyegah",
             "sedaraban", 
             "muberka", 
             "sivenuma", 
@@ -379,8 +380,7 @@
         "midi_number": 50
     }, 
     "D5": {
-        "makams": [
-            "sultaniyegah", 
+        "makams": [ 
             "dilkusa", 
             "goncairana", 
             "araban"

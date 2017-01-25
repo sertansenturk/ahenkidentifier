@@ -9,6 +9,9 @@ class AhenkIdentifier(object):
 
     @classmethod
     def identify(cls, tonic_freq, symbol_in):
+        assert 20.0 < tonic_freq < 20000.0, "The input tonic frequency must " \
+                                            "be between and 20000 Hz"
+
         tonic_dict = cls._get_dict('tonic')
         ahenks = cls._get_dict('ahenk')
 

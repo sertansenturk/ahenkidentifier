@@ -52,13 +52,14 @@ def t_wrapper(dummy_str):
     correct_ahenks = json.load(open(ahenk_file, 'r'))
 
     # parameters
-    start_freq = 16  # C0 note
+    start_freq = 16.0  # C0 note
     num_octaves = 10
     cent_step = 10.0  # cents
 
     # get the frequencies to get ahenk
     cc = np.arange(0, num_octaves, cent_step / AhenkIdentifier.CENTS_IN_OCTAVE)
-    freqs = [int(i) for i in start_freq * np.power(2.0, cc)]
+    freqs = [int(i) for i in start_freq * np.power(2.0, cc)
+             if 20.0 <= i <= 20000.0]  # restrict to 20-20000Hz for assertion
 
     # compute
     success = True

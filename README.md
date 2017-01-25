@@ -3,6 +3,10 @@
 # ahenkidentifier
 Identifies the ahenk (transposition) of a makam music recording given the tonic frequency and the symbol (or the makam)
 
+If you are using ahenkidentifier in your work, please cite:
+
+> Şentürk, S. (2016). [Computational Analysis of Audio Recordings and Music Scores for the Description and Discovery of Ottoman-Turkish Makam Music](compmusic.upf.edu/senturk2016thesis). PhD thesis, Universitat Pompeu Fabra, Barcelona, Spain.
+
 Usage
 -------
 
@@ -50,7 +54,3 @@ Authors
 -------
 Sertan Şentürk
 contact@sertansenturk.com
-
-Reference
--------
-> Şentürk, S. (2016). [Computational Analysis of Audio Recordings and Music Scores for the Description and Discovery of Ottoman-Turkish Makam Music](compmusic.upf.edu/senturk2016thesis). PhD thesis, Universitat Pompeu Fabra, Barcelona, Spain.

@@ -1,3 +1,7 @@
+#### ahenkidentifier v1.5.2
+ - Input tonic frequency is validation added.
+ - The tonic symbol of is returned as "unknown", if the tonic symbol of a makam is not given in the file [tonic.json](https://github.com/sertansenturk/ahenkidentifier/commit/d617f74e6b358fa0f42f81d44f049f3a219a4e86)
+ 
 #### ahenkidentifier v1.5.1
  - Corrected Sultaniyegah tonic symbol from D5 to D4
 

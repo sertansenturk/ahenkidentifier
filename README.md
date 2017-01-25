@@ -53,4 +53,4 @@ contact@sertansenturk.com
 
 Reference
 -------
-> Şentürk, S. (2016). __Computational Analysis of Audio Recordings and Music Scores for the Description and Discovery of Ottoman-Turkish Makam Music.__ PhD thesis, Universitat Pompeu Fabra, Barcelona, Spain.
+> Şentürk, S. (2016). [Computational Analysis of Audio Recordings and Music Scores for the Description and Discovery of Ottoman-Turkish Makam Music](compmusic.upf.edu/senturk2016thesis). PhD thesis, Universitat Pompeu Fabra, Barcelona, Spain.
